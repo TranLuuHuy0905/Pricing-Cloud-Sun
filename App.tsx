@@ -285,6 +285,11 @@ export default function App() {
           </div>
         </div>
       </main>
+      {/* ---  chữ ký  --- */}
+      <footer className="text-center py-8 text-sm text-slate-400">
+        Được thiết kế bởi <span className="font-medium text-slate-500">HuyVoi</span>
+      </footer>
+      {/* --------------------------------------- */}
     </div>
   );
 }
