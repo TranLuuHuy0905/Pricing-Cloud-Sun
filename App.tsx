@@ -144,9 +144,9 @@ export default function App() {
           <h1 className="text-2xl font-semibold text-slate-800">Cloud Pricing Calculator</h1>
           <p className="text-sm text-slate-500">Ước tính chi phí dịch vụ Cloud hàng tháng</p>
         </div>
-        <div className="text-sm text-slate-400 text-right">
+        <div className="text-base font-bold text-red-600 text-right">
           Được thiết kế bởi <br className="block md:hidden" />
-          <span className="font-medium text-slate-500">HuyVoi</span>
+          <span className="text-blue-600 text-lg">HuyVoi</span>
         </div>
       </header>
 
