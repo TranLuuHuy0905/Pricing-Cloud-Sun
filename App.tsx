@@ -139,9 +139,15 @@ export default function App() {
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 font-sans">
       {/* Header */}
-      <header className="bg-white border-b border-slate-200 px-6 py-4 sticky top-0 z-10">
-        <h1 className="text-2xl font-semibold text-slate-800">Cloud Pricing Calculator</h1>
-        <p className="text-sm text-slate-500">Ước tính chi phí dịch vụ Cloud hàng tháng</p>
+      <header className="bg-white border-b border-slate-200 px-6 py-4 sticky top-0 z-10 flex justify-between items-center">
+        <div>
+          <h1 className="text-2xl font-semibold text-slate-800">Cloud Pricing Calculator</h1>
+          <p className="text-sm text-slate-500">Ước tính chi phí dịch vụ Cloud hàng tháng</p>
+        </div>
+        <div className="text-sm text-slate-400 text-right">
+          Được thiết kế bởi <br className="block md:hidden" />
+          <span className="font-medium text-slate-500">HuyVoi</span>
+        </div>
       </header>
 
       <main className="max-w-[1600px] mx-auto p-4 md:p-6 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
@@ -285,11 +291,6 @@ export default function App() {
           </div>
         </div>
       </main>
-      {/* ---  chữ ký  --- */}
-      <footer className="text-center py-8 text-sm text-slate-400">
-        Được thiết kế bởi <span className="font-medium text-slate-500">HuyVoi</span>
-      </footer>
-      {/* --------------------------------------- */}
     </div>
   );
 }
