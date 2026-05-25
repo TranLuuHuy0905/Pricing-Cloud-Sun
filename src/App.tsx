@@ -142,9 +142,11 @@ export default function App() {
       <header className="bg-white border-b border-slate-200 px-6 py-4 sticky top-0 z-10">
         <h1 className="text-2xl font-semibold text-slate-800">Cloud Pricing Calculator</h1>
         <p className="text-sm text-slate-500">Ước tính chi phí dịch vụ Cloud hàng tháng</p>
-        <div className="text-base font-bold text-red-600 text-right">
+        <div className="text-xs md:text-sm text-slate-400 text-right group">
           Được thiết kế bởi <br className="block md:hidden" />
-          <span className="text-blue-600 text-lg">HuyVoi</span>
+          <span className="font-medium text-slate-500 group-hover:text-slate-700 transition-colors duration-300">
+            HuyVoi
+          </span>
         </div>
       </header>
 
