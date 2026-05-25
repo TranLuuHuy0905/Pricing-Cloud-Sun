@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "pricing-cloud-sun-v1",
+  "name": "pricing-cloud-sun",
   "compatibility_date": "2026-05-25",
   "observability": {
     "enabled": true
