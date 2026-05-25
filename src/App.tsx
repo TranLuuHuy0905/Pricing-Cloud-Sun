@@ -142,6 +142,10 @@ export default function App() {
       <header className="bg-white border-b border-slate-200 px-6 py-4 sticky top-0 z-10">
         <h1 className="text-2xl font-semibold text-slate-800">Cloud Pricing Calculator</h1>
         <p className="text-sm text-slate-500">Ước tính chi phí dịch vụ Cloud hàng tháng</p>
+        <div className="text-base font-bold text-red-600 text-right">
+          Được thiết kế bởi <br className="block md:hidden" />
+          <span className="text-blue-600 text-lg">HuyVoi</span>
+        </div>
       </header>
 
       <main className="max-w-[1600px] mx-auto p-4 md:p-6 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
@@ -252,7 +256,7 @@ export default function App() {
                     <span>-{formatCurrency(discountAmount)}</span>
                   </div>
                   <div className="flex justify-between items-center text-sm py-2 px-3 bg-amber-50 border border-amber-200 rounded-md">
-                    <span className="font-semibold text-amber-800">Giá sau giảm</span>
+                    <span className="font-semibold text-amber-800">Giá sau giảm (Min bán ra)</span>
                     <span className="font-bold text-amber-700 text-base">{formatCurrency(priceAfterDiscount)}</span>
                   </div>
                 </>
