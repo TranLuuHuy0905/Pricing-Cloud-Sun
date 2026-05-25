@@ -252,7 +252,7 @@ export default function App() {
                     <span>-{formatCurrency(discountAmount)}</span>
                   </div>
                   <div className="flex justify-between items-center text-sm py-2 px-3 bg-amber-50 border border-amber-200 rounded-md">
-                    <span className="font-semibold text-amber-800">Giá sau giảm</span>
+                    <span className="font-semibold text-amber-800">Giá sau giảm (Min bán ra)</span>
                     <span className="font-bold text-amber-700 text-base">{formatCurrency(priceAfterDiscount)}</span>
                   </div>
                 </>
