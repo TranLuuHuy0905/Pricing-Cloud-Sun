@@ -205,11 +205,11 @@ export default function VMCustom({ onAdd }: Props) {
                 <NumberInput value={ips} onChange={setIps} />
              </div>
              <div className="space-y-2">
-                <label className="block text-sm font-medium text-slate-700">Backup (GB/giờ)</label>
+                <label className="block text-sm font-medium text-slate-700">Backup (GB)</label>
                 <NumberInput value={backupGB} onChange={setBackupGB} placeholder="Dự kiến số GB" step={10} />
              </div>
              <div className="space-y-2">
-                <label className="block text-sm font-medium text-slate-700">Snapshot (GB/giờ)</label>
+                <label className="block text-sm font-medium text-slate-700">Snapshot (GB)</label>
                 <NumberInput value={snapshotGB} onChange={setSnapshotGB} placeholder="Dự kiến số GB" step={10} />
              </div>
            </div>
