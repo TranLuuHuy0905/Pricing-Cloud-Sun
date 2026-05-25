@@ -6,7 +6,7 @@
     "enabled": true
   },
   "assets": {
-    "directory": "build"
+    "directory": "disk"
   },
   "compatibility_flags": [
     "nodejs_compat"
