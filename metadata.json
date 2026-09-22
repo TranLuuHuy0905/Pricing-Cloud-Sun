@@ -1,6 +1,6 @@
 {
   "name": "Cloud Pricing Calculator",
-  "description": "Công cụ tính toán chi phí, chỉnh sửa cấu hình và lập báo giá dịch vụ Cloud chuyên nghiệp",
+  "description": "Công cụ tính toán chi phí và lập báo giá dịch vụ Cloud Phòng SME HCM",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
