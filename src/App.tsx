@@ -202,7 +202,7 @@ export default function App() {
           <div>
             <div className="flex items-center gap-2">
               <h1 className="text-xl sm:text-2xl font-bold text-slate-800 tracking-tight">Cloud Pricing Calculator</h1>
-              <span className="text-xs font-semibold px-2 py-0.5 bg-blue-50 text-blue-700 border border-blue-200 rounded-md">Pro</span>
+              <span className="text-xs font-semibold px-2 py-0.5 bg-blue-50 text-blue-700 border border-blue-200 rounded-md">by HuyVoi</span>
             </div>
             <p className="text-xs sm:text-sm text-slate-500 mt-0.5">Ước tính chi phí và báo giá dịch vụ Cloud Phòng SME HCM</p>
           </div>
