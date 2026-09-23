@@ -1,7 +1,6 @@
 import { useState } from 'react';
-import type { QuoteInfo } from '../types';
+import type { QuoteInfo, SalesProfile } from '../types';
 import { 
-  FileText, 
   Building, 
   Calendar, 
   Hash, 
@@ -9,15 +8,18 @@ import {
   ChevronUp, 
   RotateCcw,
   Sparkles,
-  FileSpreadsheet
+  FileSpreadsheet,
+  UserCheck,
+  Clock
 } from 'lucide-react';
 
 interface Props {
   info: QuoteInfo;
   onChange: (updated: QuoteInfo) => void;
+  onOpenSalesProfile: () => void;
 }
 
-export default function QuoteInfoSection({ info, onChange }: Props) {
+export default function QuoteInfoSection({ info, onChange, onOpenSalesProfile }: Props) {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const generateNewCode = () => {
@@ -30,13 +32,15 @@ export default function QuoteInfoSection({ info, onChange }: Props) {
     });
   };
 
+  const currentSalesName = info.salesProfile?.name || 'Cài đặt Chữ ký Sales';
+
   return (
-    <div className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden mb-6 transition-all">
+    <div className="bg-white rounded-xl shadow-xs border border-slate-200 overflow-hidden mb-6 transition-all">
       {/* Top Banner / Bar */}
       <div className="p-4 sm:p-5 bg-gradient-to-r from-blue-50/70 via-indigo-50/40 to-slate-50 border-b border-slate-200">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
           <div className="flex-1 min-w-0">
-            <div className="flex items-center gap-2 mb-1.5">
+            <div className="flex items-center gap-2 mb-1.5 flex-wrap">
               <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-blue-100 text-blue-700">
                 <Sparkles className="w-3 h-3" />
                 Thông tin Báo giá
@@ -44,6 +48,17 @@ export default function QuoteInfoSection({ info, onChange }: Props) {
               <span className="text-xs text-slate-500 font-mono">
                 {info.quoteCode}
               </span>
+
+              {/* Sales badge */}
+              <button
+                type="button"
+                onClick={onOpenSalesProfile}
+                title="Bấm để cập nhật thông tin Chuyên viên tư vấn"
+                className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-xs font-medium bg-slate-100 hover:bg-blue-100 text-slate-600 hover:text-blue-700 border border-slate-200 hover:border-blue-300 transition-colors"
+              >
+                <UserCheck className="w-3 h-3 text-blue-600" />
+                <span>{currentSalesName}</span>
+              </button>
             </div>
 
             {/* Editable Title input */}
@@ -63,7 +78,7 @@ export default function QuoteInfoSection({ info, onChange }: Props) {
             <button
               type="button"
               onClick={() => setIsExpanded(!isExpanded)}
-              className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-slate-700 bg-white hover:bg-slate-100 border border-slate-300 rounded-lg transition-colors shadow-xs"
+              className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-slate-700 bg-white hover:bg-slate-100 border border-slate-300 rounded-lg transition-colors shadow-2xs"
             >
               <Building className="w-3.5 h-3.5 text-slate-500" />
               <span>{info.customerName || 'Thêm khách hàng'}</span>
