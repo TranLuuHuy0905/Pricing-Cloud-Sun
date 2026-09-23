@@ -214,14 +214,6 @@ export default function App() {
                 {cart.length} dịch vụ đã chọn
               </span>
             )}
-            <button
-              onClick={handleExportExcel}
-              disabled={cart.length === 0}
-              className="flex items-center gap-2 bg-emerald-600 text-white text-sm font-medium px-4 py-2 rounded-lg hover:bg-emerald-700 transition-colors shadow-xs disabled:opacity-50 disabled:cursor-not-allowed"
-            >
-              <Download className="w-4 h-4" />
-              <span>Xuất Excel</span>
-            </button>
           </div>
         </div>
       </header>
