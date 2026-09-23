@@ -319,7 +319,7 @@ export default function EditItemModal({ item, isOpen, onClose, onSave }: Props) 
 
             <div className="sm:col-span-4 space-y-1.5">
               <label className="block text-xs font-semibold text-slate-700 uppercase tracking-wider">
-                Số lượng cá thể
+                Số lượng
               </label>
               <NumberInput 
                 value={quantity}
